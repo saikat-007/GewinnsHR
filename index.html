@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="admin-dashboard">
+      <!-- Navbar or sidebar -->
+
+      <div class="sidebar">
+        <div class="date">
+          <div class="today">
+            <div>Today</div>
+            <div>Wed Jul 19 , 2023</div>
+          </div>
+          <div class="time">
+            <div>7:50 hrs</div>
+            <div>counting....</div>
+          </div>
+        </div>
+        <div class="list">
+          <li>
+            <ul>
+              <a href=""
+                ><i class="fa fa-th-large" style="font-size: 24px"></i>All
+                Apps</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-dashboard" style="font-size: 24px"></i
+                >Dashboard</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-users" style="font-size: 24px"></i>Employees</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-tasks" style="font-size: 24px"></i>Roles and
+                Permissions</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-calendar" style="font-size: 24px"></i>Time and
+                Attendance</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-location-arrow" style="font-size: 36px"></i
+                >GEO-fence</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-calendar-times-o" style="font-size: 24px"></i
+                >Leave</a
+              >
+            </ul>
+            <ul>
+              <a href=""
+                ><i class="fa fa-list-alt" style="font-size: 24px"></i
+                >Reports</a
+              >
+            </ul>
+          </li>
+        </div>
+        <div class="company">
+          <button class="company-button">GewinnsHR</button>
+        </div>
+      </div>
+
+      <!--dashboard-->
+
+      <div class="dashboard">
+        <!------Admin dashboard-->
+        <nav class="navbar">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="country-select">
+            <select>
+              <option value="usa">English(UK)</option>
+              <option value="canada">English(USA)</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <div class="profile">
+            <div class="profile-info">
+              <span class="name">John Doe</span>
+              <span class="id">ID: 123456</span>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Profile Picture"
+            />
+          </div>
+        </nav>
+
+        <nav class="dashboard-nav">
+          <button id="adminBtn">Admin Dashboard</button>
+          <button id="managerBtn">Manager Dashboard</button>
+          <button id="ownerBtn">Owner Dashboard</button>
+        </nav>
+
+        <!------------------------------------- Admin dashboard ------------------------------------------>
+
+        <div class="admin" id="adminDashboard">
+          <div class="admin-div1">
+            <div class="admin-attendance">
+              <div class="admin-attendance-div">
+                <button>Today</button>
+                <button>This week</button>
+                <select>
+                  <option value="dept">Department</option>
+                  <option value="dept 1">Dept 1</option>
+                  <option value="dept 2">Dept 2</option>
+                  <option value="dept 3">Dept 3</option>
+                </select>
+              </div>
+
+              <div class="admin-attendance-div">
+                <div class="admin-attendance-div-present">
+                  <span>92%</span>
+                  <p>Present</p>
+                </div>
+                <div class="admin-attendance-div-other">
+                  <span>Absent<span>2%</span></span>
+                  <span>WFO<span>2%</span></span>
+                  <span>Week Off<span>3%</span></span>
+                  <span>Leave<span>1%</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-hire-retire">
+              <div class="admin-hire-retire-upper">
+                <select>
+                  <option value="dept">Department</option>
+                  <option value="dept 1">Dept 1</option>
+                  <option value="dept 2">Dept 2</option>
+                  <option value="dept 3">Dept 3</option>
+                </select>
+                <div>
+                  <div id="reportrange">
+                    <i class="fa fa-calendar"></i>&nbsp; <span></span>
+                    <i class="fa fa-caret-down"></i>
+                  </div>
+                </div>
+                <button style="margin-right: 10px" onclick="hire()">
+                  Hire vs Retire
+                </button>
+              </div>
+
+              <div class="admin-hire-retire-lower">
+                <div id="area-chart"></div>
+              </div>
+            </div>
+
+            <div class="admin-licence">
+              <div class="admin-licence-upper">
+                <div>
+                  <span>LICENCE</span>
+                </div>
+                <div class="admin-licence-number" id="hello">579</div>
+                <div class="admin-licence-number">585</div>
+              </div>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+
+          <div class="admin-div2">
+            <div class="admin-div2-employee admin-div2-child">
+              <div class="admin-div2-employee-upper">
+                <div id="reportrange2">
+                  <i class="fa fa-calendar"></i>&nbsp; <span></span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div>
+                  <select>
+                    <option value="dept">Department</option>
+                    <option value="dept 1">Dept 1</option>
+                    <option value="dept 2">Dept 2</option>
+                    <option value="dept 3">Dept 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="admin-div2-employee-chart">
+                <p class="chart-title">Active Employees</p>
+                <div id="barchart_material"></div>
+              </div>
+            </div>
+
+            <div class="admin-div2-head-count admin-div2-child">
+              <div class="admin-div2-employee-upper">
+                <div id="reportrange3">
+                  <i class="fa fa-calendar"></i>&nbsp; <span></span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div>
+                  <select>
+                    <option value="prod">Production</option>
+                    <option value="dept 1">Dept 1</option>
+                    <option value="dept 2">Dept 2</option>
+                    <option value="dept 3">Dept 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="admin-div2-employee-chart">
+                <p class="chart-title">Head Count</p>
+                <canvas
+                  id="mydonutChart"
+                  style="width: 100%; max-width: 400px ; height: 200px;"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-------------------------------------- Manager Dashboard ----------------------------------->
+
+        <div class="admin" id="managerDashboard">
+          <div class="manager-dashboard-select-options">
+            <div>
+              <label for="cars">Country</label>
+              <select>
+                <option value="dept">India</option>
+                <option value="dept 1">Dept 1</option>
+                <option value="dept 2">Dept 2</option>
+                <option value="dept 3">Dept 3</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="cars">State</label>
+              <select>
+                <option value="dept">West Bengal</option>
+                <option value="dept 1">Dept 1</option>
+                <option value="dept 2">Dept 2</option>
+                <option value="dept 3">Dept 3</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="cars">Branch</label>
+              <select>
+                <option value="dept">Kolkata</option>
+                <option value="dept 1">Dept 1</option>
+                <option value="dept 2">Dept 2</option>
+                <option value="dept 3">Dept 3</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="cars">Department</label>
+              <select>
+                <option value="dept 1">Production</option>
+                <option value="dept 2">Dept 2</option>
+                <option value="dept 3">Dept 3</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="cars">Shift</label>
+              <select>
+                <option value="dept">Day</option>
+                <option value="dept 1">Dept 1</option>
+                <option value="dept 2">Dept 2</option>
+                <option value="dept 3">Dept 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="admin-div1">
+            <div class="admin-attendance">
+              <div class="admin-attendance-div">
+                <button>Today</button>
+                <button>This week</button>
+                <select>
+                  <option value="dept">Department</option>
+                  <option value="dept 1">Dept 1</option>
+                  <option value="dept 2">Dept 2</option>
+                  <option value="dept 3">Dept 3</option>
+                </select>
+              </div>
+
+              <div class="admin-attendance-div">
+                <div class="admin-attendance-div-present">
+                  <span>92%</span>
+                  <p>Present</p>
+                </div>
+                <div class="admin-attendance-div-other">
+                  <span>Absent<span>2%</span></span>
+                  <span>WFO<span>2%</span></span>
+                  <span>Week Off<span>3%</span></span>
+                  <span>Leave<span>1%</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="manager-attendance-status">
+              <div class="manager-attendance-status-upper">
+                <div>
+                  <select>
+                    <option value="dept">All</option>
+                    <option value="dept 1">Dept 1</option>
+                    <option value="dept 2">Dept 2</option>
+                    <option value="dept 3">Dept 3</option>
+                  </select>
+                  <button>Column</button>
+                  <button>Line</button>
+                  <button>Data</button>
+                </div>
+                <div>
+                  <button>Attendance Status</button>
+                </div>
+              </div>
+
+              <div class="manager-attendance-status-lower">
+                <div id="area-chart-2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-div2">
+            <div class="admin-div2-employee admin-div2-child">
+              <div class="admin-div2-employee-upper">
+                <div id="reportrange4">
+                  <i class="fa fa-calendar"></i>&nbsp; <span></span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div>
+                  <select>
+                    <option value="dept">Department</option>
+                    <option value="dept 1">Dept 1</option>
+                    <option value="dept 2">Dept 2</option>
+                    <option value="dept 3">Dept 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="admin-div2-employee-chart">
+                <p class="chart-title">Payable Hours</p>
+                <canvas id="myPieChart" style="width:100%;max-width:600px;height: 200px;"></canvas>
+              </div>
+            </div>
+
+            <div class="admin-div2-head-count admin-div2-child">
+              <div class="admin-div2-employee-upper">
+                <div id="reportrange5">
+                  <i class="fa fa-calendar"></i>&nbsp; <span></span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div>
+                  <select>
+                    <option value="prod">Production</option>
+                    <option value="dept 1">Dept 1</option>
+                    <option value="dept 2">Dept 2</option>
+                    <option value="dept 3">Dept 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="admin-div2-employee-chart">
+                <p class="chart-title">Overtime Vs Ideal Hours</p>
+                <canvas id="myChart2" style="width:100%;height: 200px;"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="floating-button">
+      <!-- Button content goes here -->
+      <button><img src="images/chatbot.png" alt="" /></button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="index.js"></script>
+    <script src="manager.js"></script>
+    <script>
+      // Get references to the buttons and dashboard content
+      const adminBtn = document.getElementById("adminBtn");
+      const managerBtn = document.getElementById("managerBtn");
+      const adminDashboard = document.getElementById("adminDashboard");
+      const managerDashboard = document.getElementById("managerDashboard");
+
+      // Add click event listeners to the buttons
+      adminBtn.addEventListener("click", () => {
+        adminDashboard.style.display = "block";
+        managerDashboard.style.display = "none";
+      });
+
+      managerBtn.addEventListener("click", () => {
+        adminDashboard.style.display = "none";
+        managerDashboard.style.display = "block";
+      });
+
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,564 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.admin-dashboard {
+  display: flex;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.floating-button button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.floating-button button img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/*---------------------------Sidebar---------------------- */
+
+/* Sidebar Styles */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  background-color: rgb(11, 69, 82);
+  color: #fff;
+}
+
+/* ----------Date--------- */
+
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+  border-bottom: 1px solid white;
+  padding-bottom: 1rem;
+}
+
+.time {
+  width: 40%;
+  text-align: center;
+  background-color: teal;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 1px;
+  justify-content: center;
+}
+
+.today > div:first-child {
+  /* Your styles for the first child here */
+  font-size: xx-large;
+  font-weight: 400;
+}
+
+.time > div:first-child {
+  /* Your styles for the first child here */
+  font-size: x-large;
+  font-weight: 400;
+}
+
+/* ----------list--------- */
+
+.list li {
+  list-style: none;
+  margin: 0.3rem;
+}
+
+.list ul {
+  padding: 0.2rem;
+}
+
+.list a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: larger;
+  font-weight: 600;
+  padding: 10px;
+  padding-left: 2px;
+  transition: background-color 0.3s;
+}
+
+.list i {
+  margin-right: 10px;
+}
+
+/*--------company---------- */
+
+.company {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 4px;
+}
+
+/* Company Button Styles */
+.company-button {
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  border: 1px solid #fff; /* White border */
+  border-radius: 5px; /* Rounded edges */
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* Text color */
+  cursor: pointer;
+  font-weight: 900;
+  font-size: larger;
+}
+
+/* -------------------------------------Dashboard---------------------------------------------- */
+
+.dashboard {
+  flex: 1;
+  background-color: rgb(216, 213, 213);
+}
+
+/* --------- Navbar-------- */
+
+.navbar {
+  background-color: white;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid black;
+  margin: 4px;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  padding: 0.8rem;
+  padding-right: 8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(231, 229, 229);
+}
+
+.country-select select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgb(255, 251, 251);
+  border: 1px solid black;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 5px;
+  align-items: end;
+}
+
+.profile-info .name {
+  font-weight: bold;
+  font-size: larger;
+  color: black;
+}
+
+.profile-info .id {
+  font-size: 12px;
+  color: black;
+}
+
+/*---------Navbar 2----------*/
+
+.dashboard-nav {
+  background-color: rgb(11, 69, 82);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid black;
+  margin: 4px;
+  border-radius: 5px;
+}
+
+.dashboard-nav button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: small;
+  margin: 0 10px;
+}
+
+.nav-content {
+  margin-right: 20px;
+}
+
+/* ---------------- Admin Dashboard ---------------- */
+
+.admin {
+  display: flex;
+  margin: 4px;
+  flex-direction: column;
+}
+
+.admin-div1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin-attendance {
+  margin: 2px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.admin-attendance-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.admin-attendance-div button {
+  padding: 8px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.admin-attendance-div button:hover {
+  border: 1px solid white;
+  transition: 500ms;
+  color: whitesmoke;
+  background: teal;
+  border-radius: 4px;
+}
+
+.admin-attendance-div select {
+  padding: 8px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.admin-attendance-div-present {
+  color: rgb(6, 72, 72);
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 4px;
+}
+
+.admin-attendance-div-present span:first-child {
+  font-size: 70px;
+  font-weight: 900;
+  margin-top: 5px;
+}
+
+.admin-attendance-div-present p {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.admin-attendance-div-other {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 226, 226);
+  color: teal;
+  margin: 4px;
+}
+
+.admin-attendance-div-other span {
+  justify-content: center;
+  align-items: end;
+  font-weight: 900;
+  padding: 5px;
+}
+
+.admin-hire-retire {
+  margin: 2px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.admin-hire-retire button {
+  padding: 8px 20px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.admin-hire-retire button:hover {
+  border: 1px solid white;
+  transition: 500ms;
+  color: whitesmoke;
+  background: teal;
+  border-radius: 4px;
+}
+
+.admin-hire-retire select {
+  padding: 5px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.admin-hire-retire-upper {
+  display: flex;
+  flex-direction: row;
+}
+
+#reportrange {
+  padding: 7px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.admin-licence {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.admin-licence-upper {
+  background: linear-gradient(to bottom, #ffa500, #ff4500);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.8rem;
+}
+
+.admin-licence-upper span {
+  background-color: #fcad91;
+  padding: 5px;
+  color: rgb(4, 73, 73);
+  font-size: larger;
+}
+
+.admin-licence-number {
+  font-weight: 900;
+  font-size: 3rem;
+  padding-top: 2px;
+}
+
+#hello {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.admin-licence button {
+  background: linear-gradient(to bottom, #ffa500, #ff4500);
+  color: white;
+  padding: 8px;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 10px;
+  border: 1px solid whitesmoke;
+}
+
+/*-------------- Admin div2 2 charts------------------------*/
+.admin-div2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+
+.admin-div2-child {
+  flex: 1; /* Each child takes up 50% of the parent's width */
+  min-width: 0; /* Allow children to shrink if necessary */
+  border: 1px solid #000;
+  background-color: white;
+  margin: 2px;
+}
+
+#reportrange2 {
+  padding: 8px 20px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.admin-div2-employee-upper
+{
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  justify-content: space-around;
+}
+
+.admin-div2-employee-upper select {
+  padding: 9px 20px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.admin-div2-employee-chart
+{
+  margin: 10px;
+  margin-top: 0px;
+  padding: 24px;
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-div2-employee-chart p
+{
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.admin-div2-head-count-ratio
+{
+  position: relative;
+}
+
+#reportrange3 {
+  padding: 8px 20px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+/* Manager Dashboard Styles */
+
+#managerDashboard{
+  display: none;
+}
+
+.manager-dashboard-select-options
+{
+  background-color: whitesmoke;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.manager-dashboard-select-options label
+{
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.manager-dashboard-select-options select
+{
+  padding: 3px;
+  border: none;
+  border-radius: 5px;
+  font-weight:normal;
+  background-color: rgb(230, 228, 228);
+  color: #3a3838;
+}
+
+.manager-attendance-status
+{
+  margin: 2px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.manager-attendance-status button {
+  padding: 8px 20px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.manager-attendance-status button:hover {
+  border: 1px solid white;
+  transition: 500ms;
+  color: whitesmoke;
+  background: teal;
+  border-radius: 4px;
+}
+
+.manager-attendance-status select {
+  padding: 8px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+}
+
+.manager-attendance-status-upper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#reportrange4 {
+  padding: 7px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#reportrange5 {
+  padding: 7px;
+  margin: 1px 5px;
+  border: 1px solid teal;
+  color: teal;
+  border-radius: 2px;
+  cursor: pointer;
+}
