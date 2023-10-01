@@ -23,6 +23,39 @@
     font-size: small;
     margin: 0 10px;
   }
+
+  /* .admin-div1
+  {
+      display: flex;
+      flex-direction: column;
+  }
+  */
+
+
+  .admin-div2{
+    display: flex;
+    flex-direction: column;
+  } 
+
+  .admin-div1 {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr/* Three equal columns for large screens */
+  }
+
+  .admin-attendance,
+  .admin-licence {
+    grid-row: 1; /* Div1 and Div3 are in the first row */
+  }
+
+  .admin-attendance{
+    grid-column: span 2;
+  }
+  
+  .admin-hire-retire {
+    grid-row: 2; /* Div2 is in the second row */
+    grid-column: 1 / -1; /* Span across all columns */
+    width: 100%; /* Ensure it takes full width */
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -72,7 +105,7 @@
   }
 
   .admin-attendance {
-    margin: 4px;
+    margin: 10px;
   }
 
   .admin-attendance-div button {
@@ -119,7 +152,7 @@
     padding: 8px 20px;
     margin: 2px 5px;
   }
-  
+
   .admin-hire-retire select {
     padding: 8px 20px;
     margin: 2px 5px;
@@ -130,11 +163,45 @@
     margin: 2px 5px;
   }
 
-  .admin-hire-retire-lower{
+  .admin-hire-retire-lower {
     padding: 15px;
   }
 
   .admin-licence {
     margin-top: 10px;
+  }
+
+  .admin-licence-upper {
+    padding: 1.5rem;
+  }
+
+  .admin-licence button {
+    padding: 12px;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+
+  .admin-div2 {
+    margin-top: 15px;
+  }
+
+  .admin-div2-child {
+    margin: 5px;
+  }
+
+  #reportrange2 {
+    padding: 15px 30px;
+    margin: 2px 5px;
+  }
+
+  .admin-div2 select {
+    padding: 15px 30px;
+    margin: 2px 5px;
+  }
+
+  .manager-dashboard-select-options {
+    padding: 10px;
+    margin: 8px;
   }
 }
