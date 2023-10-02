@@ -88,11 +88,12 @@
 
   .dashboard-nav button {
     background-color: transparent;
-    border-bottom: 2px solid white;
     color: white;
     cursor: pointer;
-    font-size: small;
-    margin: 0 10px;
+    font-size:large;
+    margin: 5px;
+    width: 100%;
+    border-bottom: 1px solid white;
   }
 
   .admin-div2 {
@@ -118,6 +119,11 @@
     grid-row: 2; /* Div2 is in the second row */
     grid-column: 1 / -1; /* Span across all columns */
     width: 100%; /* Ensure it takes full width */
+  }
+
+  .manager-attendance-status{
+    padding: 20px;
+    margin-left: -10px;
   }
 }
 
