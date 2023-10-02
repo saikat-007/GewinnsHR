@@ -17,9 +17,6 @@
   .active{
     display: block;
   }
-  .search-bar {
-    display: none;
-  }
 
   .sidebar-toggle {
     cursor: pointer;
@@ -33,12 +30,21 @@
     background-color: black;
     margin: 4px 0;
   }
+
+  .search-bar input {
+    padding: 0.4rem;
+    padding-right: 4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(231, 229, 229);
+  }
+
   .country-select select {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
+    font-weight:300;
+    font-size: small;
     background-color: rgb(255, 251, 251);
     border: 1px solid black;
   }
