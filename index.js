@@ -321,3 +321,12 @@ new Chart("mydonutChart", {
     },
   },
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarToggle = document.getElementById("sidebarToggle");
+
+  sidebarToggle.addEventListener("click", function () {
+    sidebar.classList.toggle("active");
+  });
+});

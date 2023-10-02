@@ -29,6 +29,7 @@
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="responsive.css" />
     <title>Document</title>
@@ -108,7 +109,13 @@
 
       <div class="dashboard">
         <!------Admin dashboard-->
+
         <nav class="navbar">
+          <div id="sidebarToggle" class="sidebar-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
           <div class="search-bar">
             <input type="text" placeholder="Search..." />
           </div>
@@ -246,7 +253,7 @@
                 <p class="chart-title">Head Count</p>
                 <canvas
                   id="mydonutChart"
-                  style="width: 100%; max-width: 400px ; height: 200px;"
+                  style="width: 100%; max-width: 400px; height: 200px"
                 ></canvas>
               </div>
             </div>
@@ -376,7 +383,10 @@
               </div>
               <div class="admin-div2-employee-chart">
                 <p class="chart-title">Payable Hours</p>
-                <canvas id="myPieChart" style="width:100%;max-width:600px;height: 200px;"></canvas>
+                <canvas
+                  id="myPieChart"
+                  style="width: 100%; max-width: 600px; height: 200px"
+                ></canvas>
               </div>
             </div>
 
@@ -398,7 +408,10 @@
               </div>
               <div class="admin-div2-employee-chart">
                 <p class="chart-title">Overtime Vs Ideal Hours</p>
-                <canvas id="myChart2" style="width:100%;height: 200px;"></canvas>
+                <canvas
+                  id="myChart2"
+                  style="width: 100%; height: 200px"
+                ></canvas>
               </div>
             </div>
           </div>
@@ -433,8 +446,6 @@
         adminDashboard.style.display = "none";
         managerDashboard.style.display = "block";
       });
-
-      
     </script>
   </body>
 </html>

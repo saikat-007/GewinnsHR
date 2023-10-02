@@ -1,13 +1,59 @@
 @media (max-width: 575.98px) {
-  .sidebar {
+  
+  .sidebar{
     display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    position: absolute;
+    margin-top: 4.7rem;
   }
 
   .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
+  .active{
+    display: block;
+  }
+  .search-bar {
+    display: none;
+  }
+
+  .sidebar-toggle {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 15px;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
+  .country-select select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(255, 251, 251);
+    border: 1px solid black;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
   .dashboard-nav {
     display: flex;
     flex-direction: column;
@@ -24,22 +70,14 @@
     margin: 0 10px;
   }
 
-  /* .admin-div1
-  {
-      display: flex;
-      flex-direction: column;
-  }
-  */
-
-
-  .admin-div2{
+  .admin-div2 {
     display: flex;
     flex-direction: column;
-  } 
+  }
 
   .admin-div1 {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr/* Three equal columns for large screens */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns for large screens */
   }
 
   .admin-attendance,
@@ -47,10 +85,10 @@
     grid-row: 1; /* Div1 and Div3 are in the first row */
   }
 
-  .admin-attendance{
+  .admin-attendance {
     grid-column: span 2;
   }
-  
+
   .admin-hire-retire {
     grid-row: 2; /* Div2 is in the second row */
     grid-column: 1 / -1; /* Span across all columns */
